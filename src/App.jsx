@@ -5,40 +5,54 @@
 // // import Calling_function from './embedding-expression/calling_function'
 // // import Welcome from './embedding-expression/Welcome'
 
-// function App() {
+import Props from "./functional-components/Props"
+// import StateHw from "./functional-components/StateHw"
 
-//   return (
-//     <>
-//     {/* -------------------Embedding Expression------------------- */}
-//     {/* <Welcome /> */}
-//     {/* <Calling_function /> */}
-//     {/* <Conditional /> */}
-//     <RenderigList />
-//     </>
-//   )
-// }
+// import Basic from "./functional-components/Basic"
+// import State from "./functional-components/State"
 
-// export default App
-import React, { Component } from 'react'
-import Unmounting from './Class-Components/life-cyclec-methods/Unmounting'
-// import Update from './Class-Components/life-cyclec-methods/Update'
-// import Mounting from './Class-Components/life-cyclec-methods/Mounting'
-// import UsingProps from './Class-Components/UsingProps'
-// import Basic from './Class-Components/Basic'
-// import Counter from './Class-Components/Counter'
+function App() {
 
-export default class App extends Component {
-  render() {
-    return (
-      <div>
-        {/* <Basic /> */}
-        {/* <UsingProps name="abi" /> */}
-        {/* <Counter /> */}
-        {/* <Mounting /> */}
-        {/* <Update /> */}
-        <Unmounting />
-      </div>
-    )
-  }
+  return (
+    <>
+      {/* -------------------Embedding Expression------------------- */}
+      {/* <Welcome /> */}
+      {/* <Calling_function /> */}
+      {/* <Conditional /> */}
+      {/* //     <RenderigList /> */}
+
+     {/* ----------------- functional Components-------------------------- */}
+      {/* <Basic /> */}
+      {/* <State /> */}
+      {/* <StateHw /> */}
+      <Props />
+    </>
+  )
 }
+
+export default App
+// import React, { Component } from 'react'
+// // import ButtonUnMount from './Class-Components/life-cyclec-methods/ButtonUnmount'
+// // import Unmounting from './Class-Components/life-cyclec-methods/Unmounting'
+// // import Update from './Class-Components/life-cyclec-methods/Update'
+// // import Mounting from './Class-Components/life-cyclec-methods/Mounting'
+// // import UsingProps from './Class-Components/UsingProps'
+// // import Basic from './Class-Components/Basic'
+// // import Counter from './Class-Components/Counter'
+
+// export default class App extends Component {
+//   render() {
+//     return (
+//       <div>
+//         {/* <Basic /> */}
+//         {/* <UsingProps name="abi" /> */}
+//         {/* <Counter /> */}
+//         {/* <Mounting /> */}
+//         {/* <Update /> */}
+//         {/* <Unmounting /> */}
+//         {/* <ButtonUnMount /> */}
+//       </div>
+//     )
+//   }
+// }
 
