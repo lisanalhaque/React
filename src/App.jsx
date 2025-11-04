@@ -5,7 +5,21 @@
 // // import Calling_function from './embedding-expression/calling_function'
 // // import Welcome from './embedding-expression/Welcome'
 
-import UserList from "./functional-components/hooks/useEffect-hook/UserList"
+import Home from "./functional-components/hooks/useContext-Hook/Home"
+import { ThemePovider } from "./functional-components/hooks/useContext-Hook/ThemeContext"
+
+
+// import Unmount from "./functional-components/hooks/useEffect-hook/Unmount"
+
+// import Ex3 from "./functional-components/hooks/useEffect-hook/Ex3"
+
+// import Ex2 from "./functional-components/hooks/useEffect-hook/Ex2"
+
+// import ToggleButton from "./functional-components/hooks/useState-hook/ToggleButton"
+
+// import NameForm from "./functional-components/hooks/useState-hook/NameForm"
+
+// import UserList from "./functional-components/hooks/useEffect-hook/UserList"
 
 // import Timer from "./functional-components/hooks/useEffect-hook/Timer"
 
@@ -34,8 +48,18 @@ function App() {
       {/* <Props /> */}
       {/* --------------------hooks and life cycle methods------------- */}
       {/* <Timer /> */}
-      <UserList />
-    </>
+      {/* <UserList /> */}
+      {/* <NameForm /> */}
+      {/* <ToggleButton /> */}
+      {/* <Ex2 /> */}
+      {/* <Ex3 /> */}
+      {/* <Unmount /> */}
+
+      {/* ------------------------------useContext hook----------------------------------- */}
+      <ThemePovider>
+        <Home/>
+      </ThemePovider>
+      </>
   )
 }
 
