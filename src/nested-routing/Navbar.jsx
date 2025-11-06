@@ -5,31 +5,51 @@ import { NavLink } from 'react-router-dom';
 const Navbar = () => {
     const [menuOpen, setMenuOpen] = useState(false);
 
-    const toggleMenu = () => setMenuOpen (!menuOpen)
-  return (
-    <nav>
-        {/* logo */}
-    <NavLink to='/' className='logo'>Mywebsite</NavLink>  
+    const toggleMenu = () => setMenuOpen(!menuOpen)
+    return (
+        <nav>
+            {/* logo */}
 
-    {/* Hamberger menu icon  */}
-    <div className='menu-icon' onClick={toggleMenu}>
-        <span></span>
-        <span></span>
-        <span></span>
+            <NavLink to='/' className='logo'>Mywebsite</NavLink>
 
-    </div>
+            {/* Hamberger menu icon  */}
+            <div className='menu-icon' onClick={toggleMenu}>
+                <span></span>
+                <span></span>
+                <span></span>
 
-    {/* nav links  */}
-    <ul className={menuOPen ? "show" : ""}>
-        <li>
-            <NavLink 
-            to='/'
-            className={(isActive)}></NavLink>
-        </li>
-    </ul>
+            </div>
 
-    </nav>
-  )
+            {/* nav links  */}
+            <ul className={menuOpen ? "show" : ""}>
+                <li>
+                    <NavLink
+                        to='/'
+                        className={({ isActive }) => (isActive ? "active" : "")}
+                        onClick={() => setMenuOpen(false)}>
+                        Home
+                    </NavLink>
+                </li>
+                <li>
+                    <NavLink
+                        to='/about'
+                        className={({ isActive }) => (isActive ? "active" : "")}
+                        onClick={() => setMenuOpen(false)}>
+                        About
+                    </NavLink>
+                </li>
+                <li>
+                    <NavLink
+                        to='/services'
+                        className={({ isActive }) => (isActive ? "active" : "")}
+                        onClick={() => setMenuOpen(false)}>
+                        Services
+                    </NavLink>
+                </li>
+            </ul>
+
+        </nav>
+    )
 }
 
 export default Navbar
