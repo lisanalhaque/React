@@ -1,18 +1,22 @@
 
-import './App.css'
+// import './App.css'
+// import SimpleForm from './Form/SimpleForm';
+import Crud from './local-storage/Crud';
+// import Items from './React-Keys/Items';
+// import RealWorld from './React-Keys/RealWorld';
 // import RenderigList from './RenderigList'
 // // import Conditional from './embedding-expression/Conditional'
 // // import Calling_function from './embedding-expression/calling_function'
 // // import Welcome from './embedding-expression/Welcome'
 
-import { Route, Routes } from "react-router-dom";
-import Navbar from "./nested-routing/Navbar";
-import Home from './nested-routing/pages/Home';
-import About from './nested-routing/pages/About';
-import Service from './nested-routing/pages/Service';
-import WebDev from './nested-routing/pages/services/WebDev';
-import AppDev from './nested-routing/pages/services/AppDev';
-import Design from './nested-routing/pages/services/Design';
+// import { Route, Routes } from "react-router-dom";
+// import Navbar from "./nested-routing/Navbar";
+// import Home from './nested-routing/pages/Home';
+// import About from './nested-routing/pages/About';
+// import Service from './nested-routing/pages/Service';
+// import WebDev from './nested-routing/pages/services/WebDev';
+// import AppDev from './nested-routing/pages/services/AppDev';
+// import Design from './nested-routing/pages/services/Design';
 
 // import { Route, Routes } from "react-router-dom";
 // import Product from "./React-router-dom/dynamic-routing/Product";
@@ -114,27 +118,29 @@ function App() {
         <Route path="/products/:id" element={<ProductDetailPage/>}/>
       </Routes> */}
       {/* -------------- 3.Nested - Routing -------------- */}
-      <Navbar />
+      {/* <Navbar/>
       <div className="container-app">
           <Routes>
             <Route path='/' element={<Home/>}/>
-            <Route path='/about' element={<About/>}/>
+            <Route path='/about' element={<About/>}/> */}
 
             {/* nested routing starts here  */}
-            <Route path='/services' element={<Service/>}>
+            {/* <Route path='/services' element={<Service/>}>
               <Route path='Web-development' element={<WebDev/>}>
               <Route path='App-Development' element={<AppDev/>}>
               <Route path='design' element={<Design/>}>
 
-              
-
-
-
             </Route>
 
           </Routes>
-      </div>
-      </>
+      </div> */}
+      {/* -----------------------react - keys--------------- */}
+      {/* <Items /> */}
+      {/* <RealWorld /> */}
+      {/* <SimpleForm /> */}
+      <Crud />
+    </>
+    
   );
 }
 
