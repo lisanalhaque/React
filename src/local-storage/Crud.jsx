@@ -5,7 +5,7 @@ const Crud = () => {
 
     const [formData, setFormData] = useState({
         id: '',
-        name: "",
+        name: '',
         email: '',
         age: ''
     })
@@ -73,24 +73,50 @@ const Crud = () => {
             setError(valisationErrors);
             return;
         }
-        if (editMode){
-        set(users.map(user => user.id === formData.id ? formData : user));
-        setEditMode(false);
-        } else {const newUser = {...formData, id: Date.now().toString};
-        setUser([...users,newUser])
+
+        if (editMode) {
+            setUser(users.map(user => user.id === formData.id ? formData : user));
+            setEditMode(false);
+        } else {
+            const newUser = { ...formData, id: Date.now().toString };
+            setUser([...users, newUser])
         }
-        setFormData ({
+
+        setFormData({
             id: '',
-            name: "",
+            name: '',
             email: '',
             age: ''
         });
 
         setError({});
     }
-    const handleEdit = (user) => {
-        setFormData(user);
+
+    const handleEdit = (us) => {
+        setFormData(us);
+        setEditMode(true);
+    }
+
+    const HandleCancel = () => {
+        setFormData({ id: '', name: '', email: '', age: '' });
         setEditMode(false);
+        setError({})
+    }
+
+    const handleDelete = (id) => {
+        setUser(users.filter(user => user.id !== id));
+    }
+    const handleClearAll = () => {
+        if (window.confirm('Are you sure that you want to clear all datas?This action cannot be undone.')) {
+            setUser([]);
+            localStorage.removeItem("users");
+            //also clear the form if in edit mode
+            if (editMode) {
+                setFormData({ id: '', name: '', email: '', age: '' });
+                setEditMode(false);
+                setError({});
+            }
+        }
     }
 
     return (
@@ -100,34 +126,48 @@ const Crud = () => {
                 {/* name */}
                 <div>
                     <input type="text" name='name' value={formData.name} onChange={handleChange} placeholder='your name' />
-                    {error.name && <p style={{color:'red'}}>{error.name}</p>}
+                    {error.name && <p style={{ color: 'red' }}>{error.name}</p>}
                 </div>
                 {/* email */}
                 <div>
                     <input type="email" name='email' value={formData.email} onChange={handleChange} placeholder='your email' />
-                    {error.email && <p style={{color:'red'}}>{error.email}</p>}
+                    {error.email && <p style={{ color: 'red' }}>{error.email}</p>}
                 </div>
                 {/* age */}
                 <div>
                     <input type="number" name='age' value={formData.age} onChange={handleChange} placeholder='your age' />
-                    {error.age && <p style={{color:'red'}}>{error.age}</p>}
+                    {error.age && <p style={{ color: 'red' }}>{error.age}</p>}
                 </div>
-                <button type='submit'>{editMode ? 'Update USer' : 'Add User'}</button>
+                <button type='submit'>{editMode ? 'Update User' : 'Add User'}</button>
                 {
                     editMode && (
-                        <button
+                        <button type="button" onClick={HandleCancel} style={{ marginLeft: '10px' }}>Cancel</button>
                     )
                 }
             </form>
 
             <hr />
-            <div
-            style={{display:'flex' ,justifyContent: 'space-between', alignItems:'center' , marginBottom: '10px'}}>
-                <h2>user list</h2>
+            <div style={{ display:'flex', justifyContent:'space-between', alignItems:'center' , marginBottom:'10px'}}>
+                <h2>User list</h2>
                 {/* clear data button */}
+                {users.length > 0 && (
+                    <button
+                        onClick={handleClearAll}
+                        style={{
+                            background: 'blue',
+                            color: 'white',
+                            border: 'none',
+                            padding: '8px 12px',
+                            borderRadius: '4px',
+                            cursor: 'pointer',
+                            marginLeft: '30px'
+                        }}>Clear all Data
+                        
+                    </button>
+                )}
             </div>
 
-              {users.length > 0 ? (
+            {users.length > 0 ? (
                 <table>
                     <thead>
                         <tr>
@@ -139,14 +179,14 @@ const Crud = () => {
                         </tr>
                     </thead>
                     <tbody>
-                        {users.map(us =>(
-                            <tr key={us.is}>
+                        {users.map(us => (
+                            <tr key={us.id}>
                                 <td>{us.name}</td>
                                 <td>{us.email}</td>
                                 <td>{us.age}</td>
                                 <td>
                                     <button onClick={() => handleEdit(us)}>edit</button>
-                                    <button style={{marginLeft:'10px'}}>delete</button>
+                                    <button onClick={() => handleDelete(us.id)} style={{ marginLeft: '10px' }}>delete</button>
                                 </td>
 
 
@@ -154,14 +194,14 @@ const Crud = () => {
                         ))}
                     </tbody>
                 </table>
-              ) : (
-                <p>NO users added yet</p>
-              
-              )}
+            ) : (
+                <p>No users added yet</p>
+
+            )}
 
         </div>
     )
-}
+};
 
-export default Crud
+export default Crud;
 
