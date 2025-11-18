@@ -1,13 +1,15 @@
 
 // import './App.css'
 // import SimpleForm from './Form/SimpleForm';
-import Crud from './local-storage/Crud';
+// import Crud from './local-storage/Crud';
 // import Items from './React-Keys/Items';
 // import RealWorld from './React-Keys/RealWorld';
 // import RenderigList from './RenderigList'
 // // import Conditional from './embedding-expression/Conditional'
 // // import Calling_function from './embedding-expression/calling_function'
 // // import Welcome from './embedding-expression/Welcome'
+
+import Player from "./functional-components/hooks/useRef-hook/Player";
 
 // import { Route, Routes } from "react-router-dom";
 // import Navbar from "./nested-routing/Navbar";
@@ -138,7 +140,8 @@ function App() {
       {/* <Items /> */}
       {/* <RealWorld /> */}
       {/* <SimpleForm /> */}
-      <Crud />
+      {/* <Crud /> */}
+      <Player />
     </>
     
   );
