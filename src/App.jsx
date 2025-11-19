@@ -9,6 +9,7 @@
 // // import Calling_function from './embedding-expression/calling_function'
 // // import Welcome from './embedding-expression/Welcome'
 
+import ProductPage from "./designs/dynamic-routing-example/ProductPage";
 import Player from "./functional-components/hooks/useRef-hook/Player";
 
 // import { Route, Routes } from "react-router-dom";
@@ -141,7 +142,11 @@ function App() {
       {/* <RealWorld /> */}
       {/* <SimpleForm /> */}
       {/* <Crud /> */}
-      <Player />
+      {/* <Player /> */}
+
+
+      {/* -------------------------dynamic routing------------------------- */}
+      <ProductPage/>
     </>
     
   );
