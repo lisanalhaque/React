@@ -11,9 +11,11 @@ const ProductPage = () => {
       <p className='section-subtitle'>
         Lorem ipsum dolor sit, amet consectetur adipisicing elit.
       </p>
-      <div className='product-grid'>
+      <div className='products-grid'>
         {products.map((item) => (
-            <Link key={item.id} to={`/products/${item.id}`}>
+            <Link key={item.id} to={`/products/${item.id}`} 
+            style={{textDecoration:'none'}}
+            >
                 <ProductCard product={item}/>
             </Link>
         ))}
