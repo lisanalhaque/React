@@ -9,10 +9,10 @@
 // // import Calling_function from './embedding-expression/calling_function'
 // // import Welcome from './embedding-expression/Welcome'
 
-// import { Route, Routes } from "react-router-dom";
-// import ProductPage from "./designs/dynamic-routing-example/ProductPage";
-// import ProductDetails from "./designs/dynamic-routing-example/ProductDetails";
-import UseMemo from "./functional-components/hooks/UseMemo-hook/UseMemo";
+import { Route, Routes } from "react-router-dom";
+import ProductPage from "./designs/dynamic-routing-example/ProductPage";
+import ProductDetails from "./designs/dynamic-routing-example/ProductDetails";
+// import UseMemo from "./functional-components/hooks/UseMemo-hook/UseMemo";
 // import Player from "./functional-components/hooks/useRef-hook/Player";
 
 // import { Route, Routes } from "react-router-dom";
@@ -92,7 +92,7 @@ function App() {
       {/* <ThemePovider>
         <Home/>
       </ThemePovider> */}
-      <UseMemo/>
+      {/* <UseMemo/> */}
       {/* <UserApiProvider>
         <UserList/>
       </UserApiProvider> */}
@@ -150,11 +150,11 @@ function App() {
 
 
       {/* -------------------------dynamic routing------------------------- */}
-      {/* <ProductPage/> */}
-      {/* <Routes>
+      {/* <ProductPage/>  */}
+      <Routes>
         <Route path='/' element={<ProductPage/>}/>
-        <Route path='/product/:id' element={<ProductDetails/>}/>
-      </Routes> */}
+        <Route path='/products/:id' element={<ProductDetails/>}/>
+      </Routes>
     </>
     
   );
