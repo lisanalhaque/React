@@ -9,9 +9,12 @@
 // // import Calling_function from './embedding-expression/calling_function'
 // // import Welcome from './embedding-expression/Welcome'
 
-import { Route, Routes } from "react-router-dom";
-import ProductPage from "./designs/dynamic-routing-example/ProductPage";
-import ProductDetails from "./designs/dynamic-routing-example/ProductDetails";
+import BasicHookForm from "./Form/react-hook-form/BasicHookForm";
+import YupForm from "./Form/yup-react-hook-form/YupForm";
+
+// import { Route, Routes } from "react-router-dom";
+// import ProductPage from "./designs/dynamic-routing-example/ProductPage";
+// import ProductDetails from "./designs/dynamic-routing-example/ProductDetails";
 // import UseMemo from "./functional-components/hooks/UseMemo-hook/UseMemo";
 // import Player from "./functional-components/hooks/useRef-hook/Player";
 
@@ -151,10 +154,13 @@ function App() {
 
       {/* -------------------------dynamic routing------------------------- */}
       {/* <ProductPage/>  */}
-      <Routes>
+      {/* <Routes>
         <Route path='/' element={<ProductPage/>}/>
         <Route path='/products/:id' element={<ProductDetails/>}/>
-      </Routes>
+      </Routes> */}
+      {/* <BasicHookForm/> */}
+      {/* ------------------yup with react hook form -------------- */}
+      <YupForm/>
     </>
     
   );
