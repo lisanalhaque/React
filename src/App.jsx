@@ -9,8 +9,10 @@
 // // import Calling_function from './embedding-expression/calling_function'
 // // import Welcome from './embedding-expression/Welcome'
 
-import BasicHookForm from "./Form/react-hook-form/BasicHookForm";
-import YupForm from "./Form/yup-react-hook-form/YupForm";
+// import BasicHookForm from "./Form/react-hook-form/BasicHookForm";
+// import YupForm from "./Form/yup-react-hook-form/YupForm";
+import { ThemeContext } from "./functional-components/hooks/useContext-Hook/ThemeContext";
+import Counter2 from "./functional-components/hooks/usereduce-hook/Counter2";
 
 // import { Route, Routes } from "react-router-dom";
 // import ProductPage from "./designs/dynamic-routing-example/ProductPage";
@@ -77,7 +79,7 @@ function App() {
       {/* <Conditional /> */}
       {/* //     <RenderigList /> */}
 
-     {/* ----------------- functional Components-------------------------- */}
+      {/* ----------------- functional Components-------------------------- */}
       {/* <Basic /> */}
       {/* <State /> */}
       {/* <StateHw /> */}
@@ -92,6 +94,7 @@ function App() {
       {/* <Unmount /> */}
 
       {/* ------------------------------useContext hook----------------------------------- */}
+      <Counter2/>
       {/* <ThemePovider>
         <Home/>
       </ThemePovider> */}
@@ -122,6 +125,8 @@ function App() {
             <Route path="/about" element={<About/>}/>
 
           </Routes> */}
+        
+
       {/* ------------ 2. dynamic - Routing ------------ */}
       {/* <Routes>
         <Route path="/" element={<Product/>}/>
@@ -134,8 +139,8 @@ function App() {
             <Route path='/' element={<Home/>}/>
             <Route path='/about' element={<About/>}/> */}
 
-            {/* nested routing starts here  */}
-            {/* <Route path='/services' element={<Service/>}>
+      {/* nested routing starts here  */}
+      {/* <Route path='/services' element={<Service/>}>
               <Route path='Web-development' element={<WebDev/>}>
               <Route path='App-Development' element={<AppDev/>}>
               <Route path='design' element={<Design/>}>
@@ -160,9 +165,11 @@ function App() {
       </Routes> */}
       {/* <BasicHookForm/> */}
       {/* ------------------yup with react hook form -------------- */}
-      <YupForm/>
+      {/* <YupForm/> */}
+
+
     </>
-    
+
   );
 }
 
