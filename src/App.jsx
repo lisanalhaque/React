@@ -13,6 +13,7 @@
 // import YupForm from "./Form/yup-react-hook-form/YupForm";
 import { ThemeContext } from "./functional-components/hooks/useContext-Hook/ThemeContext";
 import Counter2 from "./functional-components/hooks/usereduce-hook/Counter2";
+import ShoppingCart from "./functional-components/hooks/usereduce-hook/ShoppingCart";
 
 // import { Route, Routes } from "react-router-dom";
 // import ProductPage from "./designs/dynamic-routing-example/ProductPage";
@@ -94,7 +95,8 @@ function App() {
       {/* <Unmount /> */}
 
       {/* ------------------------------useContext hook----------------------------------- */}
-      <Counter2/>
+      {/* <Counter2/> */}
+      <ShoppingCart/>
       {/* <ThemePovider>
         <Home/>
       </ThemePovider> */}
