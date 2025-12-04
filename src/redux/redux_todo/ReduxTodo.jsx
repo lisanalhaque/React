@@ -9,7 +9,6 @@ function ReduxTodo() {
     <div className='app'>
         <Provider store={store}>
             <h1>To-Do List</h1>
-
             <Add_Todo/>
             <TodoList/>
         </Provider>

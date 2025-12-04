@@ -10,6 +10,7 @@
 // // import Welcome from './embedding-expression/Welcome'
 
 import CartApp from "./context/Cart_components/CartApp";
+import ReduxTodo from "./redux/redux_todo/ReduxTodo";
 
 // import BasicHookForm from "./Form/react-hook-form/BasicHookForm";
 // import YupForm from "./Form/yup-react-hook-form/YupForm";
@@ -99,7 +100,7 @@ function App() {
       {/* ------------------------------useContext hook----------------------------------- */}
       {/* <Counter2/> */}
       {/* <ShoppingCart/> */}
-      <CartApp />
+      {/* <CartApp /> */}
 
       {/* <ThemePovider>
         <Home/>
@@ -172,6 +173,8 @@ function App() {
       {/* <BasicHookForm/> */}
       {/* ------------------yup with react hook form -------------- */}
       {/* <YupForm/> */}
+      {/* -------------------redux------------------- */}
+      <ReduxTodo/>
 
 
     </>
