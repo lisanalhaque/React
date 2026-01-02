@@ -9,8 +9,13 @@
 // // import Calling_function from './embedding-expression/calling_function'
 // // import Welcome from './embedding-expression/Welcome'
 
-import CartApp from "./context/Cart_components/CartApp";
-import ReduxTodo from "./redux/redux_todo/ReduxTodo";
+import UseEffectApi from "./functional-components/hooks/useEffect-hook/UseEffectApi";
+import UseState from "./functional-components/hooks/useState-hook/UseState";
+
+// import CartApp from "./context/Cart_components/CartApp";
+
+// import ReduxTodo from "./redux/redux_todo/ReduxTodo";
+// import ShoppingApp from "./redux/Shopping cart/components/ShoppingApp";
 
 // import BasicHookForm from "./Form/react-hook-form/BasicHookForm";
 // import YupForm from "./Form/yup-react-hook-form/YupForm";
@@ -96,6 +101,8 @@ function App() {
       {/* <Ex2 /> */}
       {/* <Ex3 /> */}
       {/* <Unmount /> */}
+      {/* <UseState /> */}
+      <UseEffectApi/>
 
       {/* ------------------------------useContext hook----------------------------------- */}
       {/* <Counter2/> */}
@@ -174,7 +181,8 @@ function App() {
       {/* ------------------yup with react hook form -------------- */}
       {/* <YupForm/> */}
       {/* -------------------redux------------------- */}
-      <ReduxTodo/>
+      {/* <ReduxTodo/> */}
+      {/* <ShoppingApp/> */}
 
 
     </>

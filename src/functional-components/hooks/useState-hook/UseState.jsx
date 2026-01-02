@@ -1,7 +1,11 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 
 const UseState = () => {
     const [count,setCount] = useState(0);//initial value
+
+    useEffect(()=> {
+    console.log("update value",count);
+},[count])
   return (
     <div>
       <p>Count: {count}</p>

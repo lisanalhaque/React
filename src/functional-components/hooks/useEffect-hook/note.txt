@@ -1,0 +1,3 @@
+In React, the useEffect hook lets a component run side effects (like data fetching, subscriptions, logging, timers,
+ or manually changing the DOM) after render,
+ and re-run them when specified dependencies change
